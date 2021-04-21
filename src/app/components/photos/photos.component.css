@@ -1,8 +1,33 @@
 .list-cards {
-    flex: 1 1 auto;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cards {
-    flex: 1 1 auto;
-    margin: 0px 0px 15px 0px;
+    margin: 0px auto 15px 0px;
+}
+
+@media only screen and (min-width: 960px) {
+    .cards {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .cards {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .cards {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cards {
+        width: 100%;
+    }
 }
