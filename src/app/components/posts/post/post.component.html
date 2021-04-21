@@ -1,1 +1,16 @@
-<p>post works!</p>
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="post">
+        <app-button-back></app-button-back>
+        <h2>Post</h2>
+        <p>Clique no post abaixo para carregar os comentários.</p>
+        <mat-card>
+            <p class="user pointer" (click)="getUserId(post?.userId)">
+                <mat-icon>person_pin</mat-icon> <span class="title">User:</span>{{ user?.name }}
+            </p>
+            <p class="user pointer" title="Open post" (click)="getCommentsByPost(post?.id)">
+                <mat-icon>comments</mat-icon> <span class="title">Post: </span> {{ post?.title }}
+            </p>
+        </mat-card>
+    </div>
+</div>

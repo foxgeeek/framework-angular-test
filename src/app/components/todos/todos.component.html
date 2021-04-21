@@ -1,1 +1,17 @@
-<p>todos works!</p>
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="todos">
+        <app-button-back></app-button-back>
+        <h2>ToDos</h2>
+        <p>Clique em um item para ver mais detalhes.</p>
+        <div class="list-todos">
+            <div *ngFor="let todo of todos" class="todos">
+                <p class="todos-person">
+                    <mat-icon (click)="getUser(todo?.userId)">person</mat-icon>
+                </p>
+                {{ todo?.title }}
+                <mat-slide-toggle [checked]="todo?.completed"></mat-slide-toggle>
+            </div>
+        </div>
+    </div>
+</div>

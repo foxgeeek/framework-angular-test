@@ -11,16 +11,20 @@ export class PostService {
     return this.http.get<any>(`${POSTS}`);
   }
 
-  getPostId(post: Post) {
-    return this.http.get<any>(`${POSTS}/${post.id}`);
+  getPostId(id: number) {
+    return this.http.get<any>(`${POSTS}/${id}`);
   }
 
   getComments() {
     return this.http.get<any>(`${COMMENTS}`);
   }
 
-  getCommentId(comment: Comment) {
-    return this.http.get<any>(`${COMMENTS}/${comment.id}`);
+  getCommentsByPost(id: number) {
+    return this.http.get<any>(`${COMMENTS}?postId=${id}`);
+  }
+
+  getCommentId(id: number) {
+    return this.http.get<any>(`${COMMENTS}/${id}`);
   }
   
 }

@@ -2,6 +2,8 @@
     <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
     <div *ngIf="photos">
         <app-button-back></app-button-back>
+        <h2>Photos</h2>
+        <p>Clique em uma das imagens para abri-la por completo.</p>
         <div class="list-cards">
             <div *ngFor="let photo of photos" class="cards">
                 <mat-card>

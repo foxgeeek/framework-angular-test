@@ -2,6 +2,8 @@
     <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
     <div *ngIf="album">
         <app-button-back></app-button-back>
+        <h2>Album</h2>
+        <p>Clique no album abaixo para carregar todas as fotos.</p>
         <mat-card>
             <p class="user pointer" (click)="getUserId(album?.userId)">
                 <mat-icon>person_pin</mat-icon> <span class="title">User:</span>{{ user?.name }}

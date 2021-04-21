@@ -1,1 +1,15 @@
-<p>comments works!</p>
+<div class="container">
+    <app-button-back></app-button-back>
+    <h2>Comments</h2>
+    <p>Todos os comentários do post ({{ post?.title }}).</p>
+    <div *ngFor="let comment of comments" class="comments">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ comment?.name }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ comment?.body }}</p>
+        </mat-expansion-panel>
+    </div>
+</div>

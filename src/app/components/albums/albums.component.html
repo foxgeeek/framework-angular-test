@@ -1,4 +1,6 @@
 <div class="container">
+    <h2>Albums</h2>
+    <p>Clique em um dos albums para ver o seu conteúdo.</p>
     <mat-form-field>
         <mat-label>Filtro</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Busca por título do album" #input>
@@ -20,7 +22,7 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
             <tr class="mat-row" *matNoDataRow>
-                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                <td class="mat-cell" colspan="4">Não foi encontrado nada referente à "{{input.value}}"</td>
             </tr>
 
         </mat-table>

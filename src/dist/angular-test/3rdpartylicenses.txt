@@ -97,6 +97,8 @@ THE SOFTWARE.
 
 @angular/material/dialog
 
+@angular/material/expansion
+
 @angular/material/form-field
 
 @angular/material/icon
@@ -108,6 +110,8 @@ THE SOFTWARE.
 @angular/material/progress-spinner
 
 @angular/material/select
+
+@angular/material/slide-toggle
 
 @angular/material/snack-bar
 

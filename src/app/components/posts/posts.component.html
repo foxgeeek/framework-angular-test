@@ -1,1 +1,32 @@
-<p>posts works!</p>
+<div class="container">
+    <h2>Posts</h2>
+    <p>Clique em um dos posts para ver todo o seu conteúdo.</p>
+    <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Busca por título do post" #input>
+    </mat-form-field>
+    <div class="mat-elevation-z8">
+        <mat-table #table [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Título </th>
+                <td mat-cell *matCellDef="let element" class="pointer" (click)="getPostById(element.id)"> {{element.title}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">Não foi encontrado nada referente à "{{input.value}}"</td>
+            </tr>
+
+        </mat-table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
