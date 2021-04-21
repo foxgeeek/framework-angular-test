@@ -1,0 +1,15 @@
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="photo">
+        <app-button-back></app-button-back>
+        <mat-card>
+            <img mat-card-image [src]="photo?.url" [alt]="photo?.title">
+            <mat-card-content>
+                <p>{{ photo?.title }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>COMPARTILHAR</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

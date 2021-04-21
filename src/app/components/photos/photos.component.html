@@ -1,0 +1,20 @@
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="photos">
+        <app-button-back></app-button-back>
+        <div class="list-cards">
+            <div *ngFor="let photo of photos" class="cards">
+                <mat-card>
+                    <img mat-card-image loading="lazy" [src]="photo?.url" [alt]="photo?.title">
+                    <mat-card-content>
+                        <p>{{ photo?.title }}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button (click)="openPhoto(photo?.id)">ABRIR</button>
+                        <button mat-button>COMPARTILHAR</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

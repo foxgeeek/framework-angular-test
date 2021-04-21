@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    padding: 24px !important;
+    width: 25%;
+}
+
+.pointer {
+    cursor: pointer;
+}

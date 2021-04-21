@@ -1,0 +1,8 @@
+.list-cards {
+    flex: 1 1 auto;
+}
+
+.cards {
+    flex: 1 1 auto;
+    margin: 0px 0px 15px 0px;
+}

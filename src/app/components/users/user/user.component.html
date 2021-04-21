@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="user">
+        <app-button-back></app-button-back>
+        <mat-card>
+            <h2>User Profile</h2>
+            <h3>Personal Data</h3>
+            <p><span class="title">Username:</span> {{ user?.username }}</p>
+            <p><span class="title">Name:</span> {{ user?.name }}</p>
+            <p><span class="title">City:</span> {{ user?.address?.city }}</p>
+            <p><span class="title">Street:</span> {{ user?.address?.street }}</p>
+            <p><span class="title">Suite:</span> {{ user?.address?.suite }}</p>
+            <p><span class="title">Zipcode:</span> {{ user?.address?.zipcode }}</p>
+
+            <hr>
+
+            <h3>Contact Data</h3>
+            <p><span class="title">Phone:</span> {{ user?.phone }}</p>
+            <p><span class="title">E-mail:</span> {{ user?.email }}</p>
+            <p><span class="title">Website:</span> {{ user?.website }}</p>
+
+            <hr>
+
+            <h3>Professional Data</h3>
+            <p><span class="title">Company name:</span> {{ user?.company?.name }}</p>
+            <p><span class="title">BS:</span> {{ user?.company?.bs }}</p>
+            <p><span class="title">Catch Phrase:</span> {{ user?.company?.catchPhrase }}</p>
+        </mat-card>
+    </div>
+</div>

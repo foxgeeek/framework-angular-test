@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-spinner *ngIf="spinnerActive" class="spinner"></mat-spinner>
+    <div *ngIf="album">
+        <app-button-back></app-button-back>
+        <mat-card>
+            <p class="user pointer" (click)="getUserId(album?.userId)">
+                <mat-icon>person_pin</mat-icon> <span class="title">User:</span>{{ user?.name }}
+            </p>
+            <p class="user pointer" title="Open album" (click)="getPhotosByAlbum(album?.id)">
+                <mat-icon>photo</mat-icon> <span class="title">Album: </span> {{ album?.title }}
+            </p>
+        </mat-card>
+    </div>
+</div>
