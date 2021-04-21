@@ -9,7 +9,7 @@
                 <p class="todos-person">
                     <mat-icon (click)="getUser(todo?.userId)">person</mat-icon>
                 </p>
-                {{ todo?.title }}
+                <span class="todo-item">{{ todo?.title }}</span>
                 <mat-slide-toggle [checked]="todo?.completed"></mat-slide-toggle>
             </div>
         </div>
